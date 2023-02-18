@@ -1,0 +1,17 @@
+create database Practise
+use Practise
+
+select * from Keyz
+select * from Keyz2
+
+create table Keyz (Id int Primary key,Name varchar(20),Address varchar(20))
+insert into Keyz  (Id,Name,Address) values(1,'A','House No. 101'),(2,'B','House No. 102'),(3,'C','House No. 103'),(4,'D','House No. 104')
+insert into Keyz  (Id,Name,Address) values(5,'E','House No. 105')
+
+create table keyz2(SNo int,Name Varchar(20),Address varchar(20),Id int Foreign Key references Keyz(Id))
+insert into Keyz2 (SNo ,Name,Address,Id) values(10,'AB','House No. 201',1),(15,'CD','House No. 202',2),(20,'EF','House No. 203',3),(25,'GH','House No. 204',4)
+insert into Keyz2(SNo ,Name,Address) values(30,'IJ','House No. 205')
+insert into Keyz2(SNo ,Name,Address,Id) values(30,'IJ','House No. 205',7)
+
+Sp_Help
+

@@ -1,0 +1,99 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                create database Functions
+use functions
+
+
+Date and Time Functions
+------------------------------------
+select getdate()
+select day(getdate())
+select month(getdate())
+select year(getdate())
+select datename(dw,getdate())
+
+Conversion Function
+-----------------------------
+select cast(10.234 as int)
+select convert(varchar(20),getdate(),113)
+
+Operators in Sql
+---------------------------------
+
+-------------------
+Assignment Operator
+-------------------
+select * from Employee where id=10;
+update EMP set deptno=101 where eid=101
+delete from EMP whre eid=107
+
+--------------------------
+Arithmetic Operators
+--------------------
+select 100+25
+select 245-400
+select 20*20
+select 25/5
+select 37%6
+select 20/5
+select 37%6
+select 20/5+20/5
+
+----------------------------
+select * from Student
+create table Student(Sid int,Sname varchar(50),Math int,Phy int,Chem int,Total int ,Average int,class varchar(max))
+insert into Student(Sid,Sname,Math,Phy,Chem) values(1,'Tushar',80,75,70)
+update Student set total=phy+chem+math
+update student set average=total/3
+update student set class ='A' where average>80
+update student set class='B' where average>60
+update student set class='C' where average>40
+update student set class='Fail' where Average<40
+
+-----------------------------
+Logical Operators
+-----------------------------
+select * from Employee where salary <10000
+
+--Q2.
+select * from Employee where salary >9000 and salary<15000
+Or
+select * from Employee where salary between 9000 and 15000
+
+--Q3
+select * from Employee where salary not between 9000 and 15000
+
+--Q4
+select * from Employee where Ename like 'r%'
+
+--Q5
+select * from Employee where name like '%y'
+
+--Q6
+select * from Employee where name like %a%
+
+--Q7
+select * from Employee where name like'---'
+
+--Q8
+select * from Employee where name like '%r%' and sal >9000
+
+--Q9
+select * from Employee where Ename>'Ram'
+
+--Q10
+select * from Employee where id like %1 and 1%
+
+----------------------------------------------------------
+'Update' with 'where' clause
+-----------------------------------------------------------
+--Q1
+update Employee set deptno=10 where id=101 OR id=103 OR id=107
+
+--Q2
+update Employee set deptno=20 where deptno is null
+
+--Q3
+update Employee set salaries=12000 where dept=10 and Ename like 'r%'
+
+--Q4
+update Employee set deptno=30 where ename='-R%'
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
